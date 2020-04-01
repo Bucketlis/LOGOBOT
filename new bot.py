@@ -1,4 +1,6 @@
 import discord
+import os
+
 
 client = discord.Client()
 
@@ -19,5 +21,5 @@ async def on_message(message):
          await message.channel.send(f'{message.author.mention} 완료되었습니다')
 
 
-
-client.run("Njk0NDY3MDYzNzUzOTk4Mzg2.XoPgYw.MqiBpB81638o6_VkSmreCIxhjB8")
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
